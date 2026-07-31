@@ -3,7 +3,6 @@ let compScore = 0;
 
 const choices = document.querySelectorAll(".choice");
 const msg = document.querySelector("#msg");
-
 const userScorePara = document.querySelector("#user-score");
 const compScorePara = document.querySelector("#comp-score");
 
@@ -19,7 +18,6 @@ const drawGame = () => {
 };
 
 const showWinner = (userWin, userChoice, compChoice) => {
-
     if(userWin){
         userScore++;
         userScorePara.innerText = userScore;
@@ -35,14 +33,11 @@ const showWinner = (userWin, userChoice, compChoice) => {
 };
 
 const playGame = (userChoice) => {
-
     const compChoice = genCompChoice();
-
     if(userChoice === compChoice){
         drawGame();
     }
     else{
-
         let userWin = true;
 
         if(userChoice === "rock"){
